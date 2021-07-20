@@ -1,0 +1,21 @@
+<div id="card-view-<%= card.id %>">
+	<% if show_card || card.face_up %>
+
+		<div class="card">
+	  	<div class="card-body">Card <%= card.symbol %></div>
+		</div>
+
+	<% else %>
+
+		<div class="card">
+	  	<div
+	  		class="card-body">
+	  		<button type="button" id="btn-flip-<%= card.id %>" class="btn btn-primary" data-id=<%= card.id %> >
+	  			Click me!
+	  		</button>
+	  		to reveal card
+	  	</div>
+		</div>
+
+	<% end %>
+</div>

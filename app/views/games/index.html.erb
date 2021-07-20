@@ -1,0 +1,11 @@
+<h1>Games#index</h1>
+<p>Game: <%= @game.id %></p>
+
+<%= button_to 'Start Over', game_path(@game, start_over: true), method: :put  %>
+
+<br />
+
+<!-- Currently only showing cards in sequential order, but would like to expand on that -->
+<% @game.cards.each do |card| %>
+	<%= render card, show_card: false %>
+<% end %>
