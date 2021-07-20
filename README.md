@@ -1,24 +1,38 @@
-# README
+# Memory Game
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Running the game
 
-Things you may want to cover:
+First install packages
 
-* Ruby version
+```
+$ bundle install
+```
 
-* System dependencies
+Then start the app
 
-* Configuration
+```
+$ rails s
+```
 
-* Database creation
+## Architecture
 
-* Database initialization
+The app is broken up into 2 main sections, the "Game", and the "Card" model.
 
-* How to run the test suite
+A game knows whether it is in the middle of a turn or that a turn is active.
 
-* Services (job queues, cache servers, search engines, etc.)
+Each game can contain any number of cards.  A card has a symbol, and a card knows whether it is currently face up, or whether it has currently been selected as part of a "turn".
 
-* Deployment instructions
+I wanted to develop the game in such a way that should a user leave the game, or refresh
+the page, the state of the game wouldn't be lost.  They could return to the game
+at another time and pickup where they left off.
 
-* ...
+## TODOs
+
+Here are things that would be nice to have in a real-world implementation of the game
+
+- Add support for random ordering of cards in a game
+- Add Users and associate games to users
+- Add ability to create multiple games
+- Improve UX of game
+- swap out jquery for react
+
